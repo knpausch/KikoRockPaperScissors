@@ -1,0 +1,26 @@
+body{
+  display: flex;
+}
+
+section{
+  display: flex;
+  border-style: dashed;
+  width: 25vw;
+  height:100vw;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+main{
+  border-style: dashed;
+  width: 50vw;
+  height:100vw;
+}
+
+header{
+  display: flex;
+  border-style: dashed;
+  flex-direction: column;
+  align-items: center;
+}
