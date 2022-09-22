@@ -56,8 +56,6 @@ main{
 
 .classic-game-section{
   display: flex;
-  border-style: dashed;
-  border-color; white;
   width: 35vw;
   height: 50vh;
   justify-content: center;
@@ -65,10 +63,8 @@ main{
   flex-direction: column;
 }
 .classic-choice{
-  border-color: blue;
   margin-top:-100px;
   width: 35vw;
-  border-style: dashed;
   display: flex;
   justify-content: space-around;
 }
