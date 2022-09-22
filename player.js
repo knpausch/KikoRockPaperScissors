@@ -1,16 +1,16 @@
 class Player{
-  constructor(name, token, wins){
+  constructor(name, token){
     this.name = name;
     this.token = token;
-    this.wins = 0;
+    this.score = 0;
+    this.figher = "undecided";
   }
 
-  takeTurn(){
-    //when player takes turn
+  choseFighter(fighter){
+    //when player chooses a fighter
+  }
+
+  updateScore(){
+    this.score++;
   }
 }
-
-var human = new Player("human", "🎸");
-var computer = new Player("computer", "💾");
-
-console.log(human);

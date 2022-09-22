@@ -1,15 +1,11 @@
-// var human = new Player("human", "🎸");
-// var computer = new Player("computer", "💾");
-//
 class Game{
-  constructor(human, computer){
-    this.gameMode = null;
-    this.humanScore = human.wins;
-    this.computerScore = computer.wins;
-    this.winner = null;
+  constructor(player1, player2){
+    this.players = [player1, player2];
+    this.gameMode = "undecided";
+    this.humanScore = player1.score;
+    this.computerScore = player2.score;
+    this.winner = "undecided";
+    this.humanFighter = player1.fighter;
+    this.computerFighter = player2.fighter;
   }
 }
-
-var gameTest = new Game(human, computer);
-
-console.log(gameTest);
