@@ -3,11 +3,6 @@ class Player{
     this.name = name;
     this.token = token;
     this.score = 0;
-    this.figher = "undecided";
-  }
-
-  choseFighter(fighter){
-    //when player chooses a fighter
   }
 
   updateScore(){
