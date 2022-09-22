@@ -54,6 +54,30 @@ main{
   background-color: #5A0C1C;
 }
 
+.classic-game-section{
+  display: flex;
+  border-style: dashed;
+  border-color; white;
+  width: 35vw;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.classic-choice{
+  border-color: blue;
+  margin-top:-100px;
+  width: 35vw;
+  border-style: dashed;
+  display: flex;
+  justify-content: space-around;
+}
+
+.rock-image, .paper-image, .scissors-image{
+  width: 200px;
+  height: 200px;
+}
+
 .human-header, .computer-header, .change-game-bttn{
   margin-top: 5vh;
 }
