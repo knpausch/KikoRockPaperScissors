@@ -1,36 +1,33 @@
 body{
   display: flex;
+  color: white;
+  font-family: Geneva, Verdana, sans-serif;
 }
 
 .left-section,.right-section{
   display: flex;
-  border-style: dashed;
   width: 25vw;
   height: 100vh;
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-.human-header, .computer-header, .change-game-bttn{
-  margin-top: 5vh;
+  background-color: #C41E3D;
 }
 
 .center-section{
   display: flex;
-  border-style: dashed;
   width: 50vw;
   height: 100vh;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: #7D1128;
 }
 
 header{
   display: flex;
   width: 50vw;
   height: 25vh;
-  border-style: dashed;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -38,23 +35,51 @@ header{
 
 main{
   display: flex;
-  border-style: dashed;
-  border-color: blue;
   width: 50vw;
   height: 75vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .classic-section,.difficult-section{
   display: flex;
-  border-style: dashed;
-  border-color: blue;
   width: 25vw;
   height: 25vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #5A0C1C;
+}
+
+.human-header, .computer-header, .change-game-bttn{
+  margin-top: 5vh;
+}
+
+.change-game-bttn{
+  border: none;
+  font-family: Geneva, Verdana, sans-serif;
+  width: 180px;
+  height: 60px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #7C90A0;
+  color: white;
+}
+
+h1{
+  font-size: 50px;
+  margin-bottom: 1px;
+}
+
+h2{
+  font-size: 40px;
+  margin-bottom: 1px;
+}
+
+p, h3{
+  margin-top:2px;
+  font-size: 25px;
 }
