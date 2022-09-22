@@ -43,7 +43,7 @@ main{
   justify-content: space-evenly;
 }
 
-.classic-section,.difficult-section{
+.classic-section,.hardcore-section{
   display: flex;
   width: 25vw;
   height: 25vh;
@@ -62,14 +62,36 @@ main{
   align-items: center;
   flex-direction: column;
 }
+
 .classic-choice{
   margin-top:-100px;
   width: 35vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
-.rock-image, .paper-image, .scissors-image{
+.hardcore-game-section{
+  display: flex;
+  width: 35vw;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hardcore-choice{
+  margin-top:-300px;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+}
+
+div{
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.rock-image, .paper-image, .scissors-image, .lizard-image, .alien-image{
   width: 200px;
   height: 200px;
 }
@@ -102,4 +124,9 @@ h2{
 p, h3{
   margin-top:2px;
   font-size: 25px;
+}
+
+.guitar2{
+  padding-left: 45px;
+  padding-right: 45px;
 }
