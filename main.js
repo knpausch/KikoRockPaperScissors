@@ -3,12 +3,13 @@ var computer = new Player("Computer","💾");
 
 var testGame = new Game(human, computer);
 
-testGame.selectGameMode("classic");
+testGame.selectGameMode("hardcore");
 
-testGame.selectHumanFighter("paper");
-testGame.selectComputerFighter();
+testGame.selectHumanFighter("scissors");
+testGame.selectComputerFighter("paper");
 console.log(human);
 console.log(computer);
 console.log(testGame);
 
-testGame.playClassicMode();
+// testGame.playClassicMode();
+testGame.playHardcoreMode();
