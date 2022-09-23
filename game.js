@@ -6,23 +6,48 @@ class Game{
     this.computerFighter = "undecided";
   }
 
-  selectGameMode(){
-    if(this.gameMode === "classic"){
-      playClassicMode();
+  selectGameMode(gameMode){
+    if(gameMode === "classic"){
+      this.gameMode = "classic";
     }
-    else if(this.gameMode === "hardcore")
+    else if(gameMode === "hardcore")
     {
-      playHardcoreMode();
+      this.gameMode = "hardcore";
     }
   }
 
-  selectFighter(fighter){
+  selectHumanFighter(fighter){
     this.humanFighter = fighter;
   }
 
+  selectComputerFighter(){
+    var classicFighterList = ["rock", "paper", "scissors"];
+    var randomNum = Math.floor(Math.random() * classicFighterList.length);
+    this.computerFighter = classicFighterList[randomNum];
+  }
+
   playClassicMode(){
-
-
+    if(this.humanFighter === this.computerFighter){
+      console.log(`A draw between ${this.humanFighter} and ${this.computerFighter}!`);
+    }
+    else if(this.humanFighter === "rock" && this.computerFighter === "scissors"){
+      console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
+    }
+    else if(this.humanFighter === "scissors" && this.computerFighter === "rock"){
+      console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
+    }
+    else if(this.humanFighter === "paper" && this.computerFighter === "rock"){
+      console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
+    }
+    else if(this.humanFighter === "rock" && this.computerFighter === "paper"){
+      console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
+    }
+    else if(this.humanFighter === "scissors" && this.computerFighter === "paper"){
+      console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
+    }
+    else if(this.humanFighter === "paper" && this.computerFighter === "scissors"){
+      console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
+    }
   }
 
   playHardcoreMode(){
