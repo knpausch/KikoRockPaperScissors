@@ -7,6 +7,5 @@ class Player{
 
   updateScore(){
     this.score++;
-    console.log(this.score);
   }
 }
