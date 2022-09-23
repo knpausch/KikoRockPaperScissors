@@ -1,24 +1,29 @@
 var human = new Player("Human","🎸");
 var computer = new Player("Computer","💾");
+var myGame = new Game(human, computer);
 
-var testGame = new Game(human, computer);
+//SET GAME MODE
+// myGame.changeGameMode("classic");
+myGame.changeGameMode("hardcore");
 
-testGame.changeGameMode("hardcore");
+//ROUND 1
+myGame.selectHumanFighter("paper");
+myGame.selectComputerFighter();
+// myGame.playClassicMode();
+myGame.playHardcoreMode();
 
-testGame.selectHumanFighter("rock");
-testGame.selectComputerFighterTester("scissors");
-// testGame.selectComputerFighter();
+//ROUND 2
+myGame.selectHumanFighter("alien");
+myGame.selectComputerFighter();
+// myGame.playClassicMode();
+myGame.playHardcoreMode();
 
-console.log(human);
-console.log(computer);
-console.log(testGame);
+//ROUND 3
+myGame.selectHumanFighter("lizard");
+myGame.selectComputerFighter();
+// myGame.playClassicMode();
+myGame.playHardcoreMode();
 
-if (testGame.gameMode === "classic"){
-  testGame.playClassicMode();
-}
-else if(testGame.gameMode === "hardcore"){
-  testGame.playHardcoreMode();
-}
-
-// testGame.playClassicMode();
-// testGame.playHardcoreMode();
+console.log(myGame.players[0]);
+console.log(myGame.players[1]);
+console.log(myGame);

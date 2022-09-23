@@ -44,21 +44,27 @@ class Game{
     }
     else if(this.humanFighter === "rock" && this.computerFighter === "scissors"){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
+      this.players[0].updateScore();
     }
     else if(this.humanFighter === "scissors" && this.computerFighter === "rock"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
+      this.players[1].updateScore();
     }
     else if(this.humanFighter === "paper" && this.computerFighter === "rock"){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
+      this.players[0].updateScore();
     }
     else if(this.humanFighter === "rock" && this.computerFighter === "paper"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
+      this.players[1].updateScore();
     }
     else if(this.humanFighter === "scissors" && this.computerFighter === "paper"){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
+      this.players[0].updateScore();
     }
     else if(this.humanFighter === "paper" && this.computerFighter === "scissors"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
+      this.players[1].updateScore();
     }
   }
 
@@ -68,35 +74,43 @@ class Game{
     }
     else if(this.humanFighter === "rock" && (this.computerFighter === "scissors" || this.computerFighter === "lizard")){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
+      this.players[0].updateScore();
     }
     else if((this.humanFighter === "scissors" || this.humanFighter === "lizard") && this.computerFighter === "rock"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
+      this.players[1].updateScore();
     }
     else if(this.humanFighter === "paper" && (this.computerFighter === "rock" || this.computerFighter === "alien")){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
+      this.players[0].updateScore();
     }
     else if((this.humanFighter === "rock" || this.humanFighter === "alien") && this.computerFighter === "paper"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
+      this.players[1].updateScore();
     }
     else if(this.humanFighter === "scissors" && (this.computerFighter === "paper" || this.computerFighter === "lizard")){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
+      this.players[0].updateScore();
     }
     else if((this.humanFighter === "paper" || this.humanFighter === "lizard") && this.computerFighter === "scissors"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
+      this.players[1].updateScore();
     }
     else if(this.humanFighter === "lizard" && (this.computerFighter === "paper" || this.computerFighter === "alien")){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
+      this.players[0].updateScore();
     }
     else if((this.humanFighter === "paper" || this.humanFighter === "alien") && this.computerFighter === "lizard"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
+      this.players[1].updateScore();
     }
     else if(this.humanFighter === "alien" && (this.computerFighter === "scissors" || this.computerFighter === "rock")){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
+      this.players[0].updateScore();
     }
     else if((this.humanFighter === "scissors" || this.humanFighter === "rock") && this.computerFighter === "alien"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
+      this.players[1].updateScore();
     }
   }
-
-
 }//end of class
