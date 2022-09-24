@@ -99,6 +99,8 @@ div{
 .rock-image, .paper-image, .scissors-image, .lizard-image, .alien-image{
   width: 200px;
   height: 200px;
+  border-style: dashed;
+  cursor: pointer;
 }
 
 .human-header, .computer-header, .change-game-bttn{

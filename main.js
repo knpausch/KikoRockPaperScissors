@@ -1,5 +1,5 @@
 //TO FIX: fighter images, they shift up when selected (use stack flexbox or fixed sizes)
-
+//TO FIX: clicking on the classic fighters, set each element into a button
 
 var human = new Player("Human","🎸");
 var computer = new Player("Computer","💾");
@@ -27,22 +27,23 @@ function loadClassicFigherPage(){
 }
 
 function selectClassicFighter(event){
-  if (event.target.classList.contains("rock-image")){
-    myGame.selectHumanFighter("rock");
-    classicGuitar1.innerText = "🎸";
-    console.log(myGame);
+  console.log(event.target.closest(".rock-image"));
+
+  if (event.currentTarget.classList.contains("rock-image")){
+    console.log("whoa")
+    // myGame.selectHumanFighter("rock");
+    // classicGuitar1.innerText = "🎸";
+    // console.log(myGame);
   }
   else if (event.target.classList.contains("paper-image")){
-    console.log("paper");
-    myGame.selectHumanFighter("paper");
-    classicGuitar2.innerText = "🎸";
-    console.log(myGame);
+    // myGame.selectHumanFighter("paper");
+    // classicGuitar2.innerText = "🎸";
+    // console.log(myGame);
   }
   else if (event.target.classList.contains("scissors-image")){
-    console.log("scissors");
-    myGame.selectHumanFighter("scissors");
-    classicGuitar3.innerText = "🎸";
-    console.log(myGame);
+    // myGame.selectHumanFighter("scissors");
+    // classicGuitar3.innerText = "🎸";
+    // console.log(myGame);
   }
 }
 
