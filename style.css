@@ -55,8 +55,7 @@ main{
 }
 
 .classic-section-hide, .hardcore-section-hide,
-.classic-game-section-hidden, .guitar1-hidden,
-.guitar2-hidden, .guitar3-hidden{
+.classic-game-section-hidden{
   display: none;
 }
 
@@ -132,7 +131,8 @@ p, h3{
   font-size: 25px;
 }
 
-.guitar2{
+/* copy paste another for hardcore guitar */
+.classic-guitar2{
   padding-left: 45px;
   padding-right: 45px;
 }

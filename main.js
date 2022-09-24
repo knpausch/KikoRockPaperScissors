@@ -1,3 +1,6 @@
+//TO FIX: fighter images, they shift up when selected (use stack flexbox or fixed sizes)
+
+
 var human = new Player("Human","🎸");
 var computer = new Player("Computer","💾");
 var myGame = new Game(human, computer);
@@ -5,6 +8,9 @@ var myGame = new Game(human, computer);
 var classicBttn = document.querySelector("#classicBttn");
 var hardcoreBttn = document.querySelector("#hardcoreBttn");
 var classicFighters = document.querySelector("#classicFighterSection");
+var classicGuitar1 = document.querySelector("#classicGuitar1");
+var classicGuitar2 = document.querySelector("#classicGuitar2");
+var classicGuitar3 = document.querySelector("#classicGuitar3");
 
 classicBttn.addEventListener('click', loadClassicFigherPage);
 classicFighters.addEventListener('click', selectClassicFighter);
@@ -22,40 +28,36 @@ function loadClassicFigherPage(){
 
 function selectClassicFighter(event){
   if (event.target.classList.contains("rock-image")){
-    console.log("ayyy it rock")
+    myGame.selectHumanFighter("rock");
+    classicGuitar1.innerText = "🎸";
+    console.log(myGame);
   }
   else if (event.target.classList.contains("paper-image")){
-    console.log("ayyy it paper")
+    console.log("paper");
+    myGame.selectHumanFighter("paper");
+    classicGuitar2.innerText = "🎸";
+    console.log(myGame);
   }
   else if (event.target.classList.contains("scissors-image")){
-    console.log("ayyy it scissors")
+    console.log("scissors");
+    myGame.selectHumanFighter("scissors");
+    classicGuitar3.innerText = "🎸";
+    console.log(myGame);
   }
 }
 
-
-
 //SET GAME MODE
-// myGame.changeGameMode("classic");
 // myGame.changeGameMode("hardcore");
 
-//ROUND 1
+//ROUND 1 - CLASSIC
+// myGame.selectComputerFighter();
+// myGame.playClassicMode();
+// myGame.playHardcoreMode();
+
+//ROUND 1 - HARDCORE
 // myGame.selectHumanFighter("paper");
 // myGame.selectComputerFighter();
 // myGame.playClassicMode();
 // myGame.playHardcoreMode();
 
-//ROUND 2
-// myGame.selectHumanFighter("alien");
-// myGame.selectComputerFighter();
-// myGame.playClassicMode();
-// myGame.playHardcoreMode();
-
-//ROUND 3
-// myGame.selectHumanFighter("lizard");
-// myGame.selectComputerFighter();
-// myGame.playClassicMode();
-// myGame.playHardcoreMode();
-
-// console.log(myGame.players[0]);
-// console.log(myGame.players[1]);
-// console.log(myGame);
+//SHOW SCORE
