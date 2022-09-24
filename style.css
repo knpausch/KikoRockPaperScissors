@@ -54,6 +54,11 @@ main{
   background-color: #5A0C1C;
 }
 
+.classic-section-hide, .hardcore-section-hide,
+.classic-game-section-hidden{
+  display: none;
+}
+
 .classic-game-section{
   display: flex;
   width: 35vw;
@@ -126,7 +131,8 @@ p, h3{
   font-size: 25px;
 }
 
-.guitar2{
+/* copy paste another for hardcore guitar */
+.classic-guitar2{
   padding-left: 45px;
   padding-right: 45px;
 }
