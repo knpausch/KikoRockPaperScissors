@@ -54,7 +54,9 @@ main{
   background-color: #5A0C1C;
 }
 
-.classic-section-hide, .hardcore-section-hide, .classic-game-section-hidden{
+.classic-section-hide, .hardcore-section-hide,
+.classic-game-section-hidden, .guitar1-hidden,
+.guitar2-hidden, .guitar3-hidden{
   display: none;
 }
 

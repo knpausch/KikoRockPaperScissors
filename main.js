@@ -7,16 +7,35 @@ var hardcoreBttn = document.querySelector("#hardcoreBttn");
 var classicFighters = document.querySelector("#classicFighterSection");
 
 classicBttn.addEventListener('click', loadClassicFigherPage);
+classicFighters.addEventListener('click', selectClassicFighter);
+
+console.log(myGame);
 
 function loadClassicFigherPage(){
   classicBttn.className = "classic-section-hide";
   hardcoreBttn.className = "hardcore-section-hide";
   classicFighters.className = "classic-game-section";
 
+  myGame.changeGameMode("classic");
+  console.log(myGame);
 }
 
+function selectClassicFighter(event){
+  if (event.target.classList.contains("rock-image")){
+    console.log("ayyy it rock")
+  }
+  else if (event.target.classList.contains("paper-image")){
+    console.log("ayyy it paper")
+  }
+  else if (event.target.classList.contains("scissors-image")){
+    console.log("ayyy it scissors")
+  }
+}
+
+
+
 //SET GAME MODE
-myGame.changeGameMode("classic");
+// myGame.changeGameMode("classic");
 // myGame.changeGameMode("hardcore");
 
 //ROUND 1
