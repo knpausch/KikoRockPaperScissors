@@ -54,6 +54,10 @@ main{
   background-color: #5A0C1C;
 }
 
+.classic-section-hide, .hardcore-section-hide, .classic-game-section-hidden{
+  display: none;
+}
+
 .classic-game-section{
   display: flex;
   width: 35vw;
