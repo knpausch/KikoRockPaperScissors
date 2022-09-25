@@ -14,6 +14,7 @@ var classicGuitar3 = document.querySelector("#classicGuitar3");
 var fighterSelection = document.querySelector("#classicChoice");
 var fightScene = document.querySelector("#fightGameSection");
 var fighter1 = document.querySelector("#fighter1Image");
+var fighter2 = document.querySelector("#fighter2Image");
 
 classicBttn.addEventListener('click', loadClassicFigherPage);
 classicFighters.addEventListener('click', selectClassicFighter);
@@ -26,12 +27,14 @@ function loadClassicFigherPage(){
   classicFighters.className = "classic-game-section";
 
   myGame.changeGameMode("classic");
-  console.log(myGame);
 }
 
 function loadFightPage(){
   classicFighters.className = "classic-game-section-hidden";
   fightScene.className = "fight-game-section";
+  myGame.selectComputerFighter();
+  fighter2.src = `assets/${myGame.computerFighter}.png`;
+  console.log(myGame);
 }
 
 function selectClassicFighter(event){
