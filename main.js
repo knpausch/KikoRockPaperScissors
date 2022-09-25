@@ -1,8 +1,7 @@
 //NON-PRESSING ITEMS TO IMPROVE:
 //TO FIX: fighter images, they shift up when selected
 //(use stack flexbox or fixed placement)
-//TO FIX: check game on macbook resolution
-//TO FIX: image size being dynamic
+//TO FIX: check game on macbook resolution, image size being dynamic
 //TO FIX: fighters show hover mouse when round ended
 
 var human = new Player("Human","🎸");
@@ -24,6 +23,8 @@ var fighter1 = document.querySelector("#fighter1Image");
 var fighter2 = document.querySelector("#fighter2Image");
 var changeGameBttn = document.querySelector("#changeGameBttn");
 
+var finishedFirstRound = false;
+
 classicBttn.addEventListener('click', loadClassicFigherPage);
 classicFighters.addEventListener('click', selectClassicFighter);
 changeGameBttn.addEventListener('click', loadLobbyPage);
@@ -37,6 +38,8 @@ function loadLobbyPage(){
   classicBttn.className = "classic-section";
   hardcoreBttn.className = "hardcore-section";
   changeGameBttn.className = "change-game-bttn-hidden";
+  classicFighters.className = "classic-game-section-hidden";
+  finishedFirstRound = false;
 }
 
 function updateScoreboard(){
@@ -45,6 +48,10 @@ function updateScoreboard(){
 }
 
 function loadClassicFigherPage(){
+  if(finishedFirstRound){
+    changeGameBttn.className = "change-game-bttn";
+  }
+
   classicGuitar1.innerText = " ";
   classicGuitar2.innerText = " ";
   classicGuitar3.innerText = " ";
@@ -84,11 +91,11 @@ function loadFightPage(){
     userPrompt.innerText = "Computer wins this round!";
   }
   updateScoreboard();
-  changeGameBttn.className = "change-game-bttn";
+
   console.log(myGame);
 
+  finishedFirstRound = true;
   const myTimeout2 = setTimeout(loadClassicFigherPage, 3000);
-
 }
 
 function selectClassicFighter(event){
@@ -121,5 +128,4 @@ function selectClassicFighter(event){
 }
 
 //TO DO:
-//AJDUST: Show change game button after 1 round
 //BUILD: Hardcore game on the dom
