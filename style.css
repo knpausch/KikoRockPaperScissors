@@ -54,8 +54,9 @@ main{
   background-color: #5A0C1C;
 }
 
-.classic-section-hide, .hardcore-section-hide,
-.classic-game-section-hidden{
+.change-game-bttn-hidden, .classic-section-hide,
+.hardcore-section-hide, .classic-game-section-hidden,
+.classic-choice-hidden, .fight-game-section-hidden{
   display: none;
 }
 
@@ -96,9 +97,11 @@ div{
   display: flex;
 }
 
-.rock-image, .paper-image, .scissors-image, .lizard-image, .alien-image{
+.rock-image, .paper-image, .scissors-image,
+.lizard-image, .alien-image, .fighter1-image, .fighter2-image{
   width: 200px;
   height: 200px;
+  cursor: pointer;
 }
 
 .human-header, .computer-header, .change-game-bttn{
@@ -133,6 +136,6 @@ p, h3{
 
 /* copy paste another for hardcore guitar */
 .classic-guitar2{
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 75px;
+  padding-right: 75px;
 }

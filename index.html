@@ -8,14 +8,14 @@
 
     <section class="left-section">
       <h2 class="human-header">🎸<br>Human</h2>
-      <p>Wins: 0</p>
-      <!-- <button class="change-game-bttn">Change Game?</button> -->
+      <p id="humanScore">Wins:</p>
+      <button class="change-game-bttn-hidden" id="changeGameBttn">Change Game?</button>
     </section>
 
     <section class="center-section">
       <header>
         <h1>Rock, Paper, Scissors</h1>
-        <h3>Choose Your Game!</h3>
+        <h3 id="userPrompt">Choose Your Game!</h3>
       </header>
       <main>
         <!-- Home Screen -->
@@ -35,7 +35,7 @@
             <img class="paper-image" src="assets/paper.png" alt="paper">
             <img class="scissors-image" src="assets/scissors.png" alt="scissors">
           </section>
-          <section class="classic-choice">
+          <section class="classic-choice-hidden" id="classicChoice">
             <h1 class="classic-guitar1" id="classicGuitar1"> </h1>
             <h1 class="classic-guitar2" id="classicGuitar2"> </h1>
             <h1 class="classic-guitar3" id="classicGuitar3"> </h1>
@@ -65,17 +65,17 @@
         </section> -->
 
         <!-- Fight Gameplay -->
-        <!-- <section class="fight-game-section">
-          <img class="paper-image" src="assets/paper.png" alt="paper">
-          <img class="paper-image" src="assets/paper.png" alt="paper">
-        </section> -->
+        <section class="fight-game-section-hidden" id="fightGameSection">
+          <img class="fighter1-image" id="fighter1Image" src="assets/alien.png" alt="paper">
+          <img class="fighter2-image" id="fighter2Image" src="assets/alien.png" alt="paper">
+        </section>
 
       </main>
     </section>
 
     <section class="right-section">
       <h2 class="computer-header">💾<br>Computer</h2>
-      <p>Wins: 0</p>
+      <p id="computerScore">Wins:</p>
     </section>
 
     <script type="text/javascript" src="player.js"></script>
