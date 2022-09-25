@@ -8,6 +8,8 @@ var myGame = new Game(human, computer);
 var classicBttn = document.querySelector("#classicBttn");
 var hardcoreBttn = document.querySelector("#hardcoreBttn");
 var userPrompt = document.querySelector("#userPrompt");
+var humanScore = document.querySelector("#humanScore");
+var computerScore = document.querySelector("#computerScore");
 var classicFighters = document.querySelector("#classicFighterSection");
 var classicGuitar1 = document.querySelector("#classicGuitar1");
 var classicGuitar2 = document.querySelector("#classicGuitar2");
@@ -20,7 +22,15 @@ var fighter2 = document.querySelector("#fighter2Image");
 classicBttn.addEventListener('click', loadClassicFigherPage);
 classicFighters.addEventListener('click', selectClassicFighter);
 
+
 console.log(myGame);
+
+updateScoreboard();
+
+function updateScoreboard(){
+  humanScore.innerText = "Wins: "+myGame.players[0].score;
+  computerScore.innerText = "Wins "+myGame.players[1].score;
+}
 
 function loadClassicFigherPage(){
   classicBttn.className = "classic-section-hide";
@@ -49,7 +59,7 @@ function loadFightPage(){
   else if (result === "computer"){
     userPrompt.innerText = "Computer wins this round!";
   }
-
+  updateScoreboard();
   console.log(myGame);
 }
 
