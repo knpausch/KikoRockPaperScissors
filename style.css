@@ -55,7 +55,7 @@ main{
 }
 
 .classic-section-hide, .hardcore-section-hide,
-.classic-game-section-hidden{
+.classic-game-section-hidden, .classic-choice-hidden{
   display: none;
 }
 
@@ -66,9 +66,11 @@ main{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-style: dashed;
 }
 
 .classic-choice{
+  border-style: dashed;
   margin-top:-100px;
   width: 35vw;
   display: flex;
@@ -135,6 +137,6 @@ p, h3{
 
 /* copy paste another for hardcore guitar */
 .classic-guitar2{
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 75px;
+  padding-right: 75px;
 }
