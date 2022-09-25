@@ -1,4 +1,7 @@
-//TO FIX: fighter images, they shift up when selected (use stack flexbox or fixed sizes)
+//NON-PRESSING ITEMS TO IMPROVE:
+//TO FIX: fighter images, they shift up when selected
+//(use stack flexbox or fixed placement)
+//TO FIX: check game on macbook resolution
 //TO FIX: image size being dynamic
 
 var human = new Player("Human","🎸");
@@ -18,14 +21,22 @@ var fighterSelection = document.querySelector("#classicChoice");
 var fightScene = document.querySelector("#fightGameSection");
 var fighter1 = document.querySelector("#fighter1Image");
 var fighter2 = document.querySelector("#fighter2Image");
+var changeGameBttn = document.querySelector("#changeGameBttn");
 
 classicBttn.addEventListener('click', loadClassicFigherPage);
 classicFighters.addEventListener('click', selectClassicFighter);
-
+changeGameBttn.addEventListener('click', loadLobbyPage);
 
 console.log(myGame);
 
 updateScoreboard();
+
+function loadLobbyPage(){
+  fightScene.className = "fight-game-section-hidden";
+  classicBttn.className = "classic-section";
+  hardcoreBttn.className = "hardcore-section";
+  changeGameBttn.className = "change-game-bttn-hidden";
+}
 
 function updateScoreboard(){
   humanScore.innerText = "Wins: "+myGame.players[0].score;
@@ -60,6 +71,7 @@ function loadFightPage(){
     userPrompt.innerText = "Computer wins this round!";
   }
   updateScoreboard();
+  changeGameBttn.className = "change-game-bttn";
   console.log(myGame);
 }
 
@@ -92,18 +104,9 @@ function selectClassicFighter(event){
   }
 }
 
-//SET GAME MODE
-// myGame.changeGameMode("hardcore");
-
-//ROUND 1 - CLASSIC
-// myGame.selectComputerFighter();
-// myGame.playClassicMode();
-// myGame.playHardcoreMode();
-
-//ROUND 1 - HARDCORE
-// myGame.selectHumanFighter("paper");
-// myGame.selectComputerFighter();
-// myGame.playClassicMode();
-// myGame.playHardcoreMode();
-
-//SHOW SCORE
+//TO DO:
+//INVESTIGATE/FIX: !!Watch out!! Fight result images to be
+//clickable
+//BUILD: Reset classic game after round mode
+//AJDUST: Show change game button after 1 round
+//BUILD: Hardcore game on the dom

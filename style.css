@@ -54,9 +54,9 @@ main{
   background-color: #5A0C1C;
 }
 
-.classic-section-hide, .hardcore-section-hide,
-.classic-game-section-hidden, .classic-choice-hidden,
-.fight-game-section-hidden{
+.change-game-bttn-hidden, .classic-section-hide,
+.hardcore-section-hide, .classic-game-section-hidden,
+.classic-choice-hidden, .fight-game-section-hidden{
   display: none;
 }
 
