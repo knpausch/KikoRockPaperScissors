@@ -3,6 +3,7 @@
 //(use stack flexbox or fixed placement)
 //TO FIX: check game on macbook resolution
 //TO FIX: image size being dynamic
+//TO FIX: fighters show hover mouse when round ended
 
 var human = new Player("Human","🎸");
 var computer = new Player("Computer","💾");
@@ -44,6 +45,12 @@ function updateScoreboard(){
 }
 
 function loadClassicFigherPage(){
+  classicGuitar1.innerText = " ";
+  classicGuitar2.innerText = " ";
+  classicGuitar3.innerText = " ";
+
+  fightScene.className = "fight-game-section-hidden";
+
   classicBttn.className = "classic-section-hide";
   hardcoreBttn.className = "hardcore-section-hide";
   classicFighters.className = "classic-game-section";
@@ -73,6 +80,8 @@ function loadFightPage(){
   updateScoreboard();
   changeGameBttn.className = "change-game-bttn";
   console.log(myGame);
+
+  const myTimeout2 = setTimeout(loadClassicFigherPage, 3000);
 }
 
 function selectClassicFighter(event){
@@ -105,8 +114,6 @@ function selectClassicFighter(event){
 }
 
 //TO DO:
-//INVESTIGATE/FIX: !!Watch out!! Fight result images to be
-//clickable
 //BUILD: Reset classic game after round mode
 //AJDUST: Show change game button after 1 round
 //BUILD: Hardcore game on the dom
