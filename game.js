@@ -39,33 +39,42 @@ class Game{
   }
 
   playClassicMode(){
+    var result;
     if(this.humanFighter === this.computerFighter){
       console.log(`A draw between ${this.humanFighter} and ${this.computerFighter}!`);
+      result = "draw";
     }
     else if(this.humanFighter === "rock" && this.computerFighter === "scissors"){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
       this.players[0].updateScore();
+      result = "human";
     }
     else if(this.humanFighter === "scissors" && this.computerFighter === "rock"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
       this.players[1].updateScore();
+      result = "computer";
     }
     else if(this.humanFighter === "paper" && this.computerFighter === "rock"){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
       this.players[0].updateScore();
+      result = "human";
     }
     else if(this.humanFighter === "rock" && this.computerFighter === "paper"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
       this.players[1].updateScore();
+      result = "computer";
     }
     else if(this.humanFighter === "scissors" && this.computerFighter === "paper"){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
       this.players[0].updateScore();
+      result = "human";
     }
     else if(this.humanFighter === "paper" && this.computerFighter === "scissors"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
       this.players[1].updateScore();
+      result = "computer";
     }
+    return result;
   }
 
   playHardcoreMode(){

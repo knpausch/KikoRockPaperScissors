@@ -7,6 +7,7 @@ var myGame = new Game(human, computer);
 
 var classicBttn = document.querySelector("#classicBttn");
 var hardcoreBttn = document.querySelector("#hardcoreBttn");
+var userPrompt = document.querySelector("#userPrompt");
 var classicFighters = document.querySelector("#classicFighterSection");
 var classicGuitar1 = document.querySelector("#classicGuitar1");
 var classicGuitar2 = document.querySelector("#classicGuitar2");
@@ -26,6 +27,8 @@ function loadClassicFigherPage(){
   hardcoreBttn.className = "hardcore-section-hide";
   classicFighters.className = "classic-game-section";
 
+  userPrompt.innerText = "Choose your fighter!";
+
   myGame.changeGameMode("classic");
 }
 
@@ -34,6 +37,19 @@ function loadFightPage(){
   fightScene.className = "fight-game-section";
   myGame.selectComputerFighter();
   fighter2.src = `assets/${myGame.computerFighter}.png`;
+
+  var result = myGame.playClassicMode();
+
+  if(result === "draw"){
+    userPrompt.innerText = "It's a draw!";
+  }
+  else if (result === "human"){
+    userPrompt.innerText = "Human wins this round!";
+  }
+  else if (result === "computer"){
+    userPrompt.innerText = "Computer wins this round!";
+  }
+
   console.log(myGame);
 }
 
