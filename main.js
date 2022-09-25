@@ -23,15 +23,55 @@ var fighter1 = document.querySelector("#fighter1Image");
 var fighter2 = document.querySelector("#fighter2Image");
 var changeGameBttn = document.querySelector("#changeGameBttn");
 
+var hardcoreFighters = document.querySelector("#hardcoreFighterSection");
+var hardcoreGuitar1 = document.querySelector("#hardcoreGuitar1");
+var hardcoreGuitar2 = document.querySelector("#hardcoreGuitar2");
+var hardcoreGuitar3 = document.querySelector("#hardcoreGuitar3");
+var hardcoreGuitar4 = document.querySelector("#hardcoreGuitar4");
+var hardcoreGuitar5 = document.querySelector("#hardcoreGuitar5");
+var fightScene = document.querySelector("#fightGameSection");
+var hardcoreChoice = document.querySelector("#hardcoreChoice");
+
 var finishedFirstRound = false;
 
-classicBttn.addEventListener('click', loadClassicFigherPage);
+classicBttn.addEventListener('click', loadClassicFighterPage);
 classicFighters.addEventListener('click', selectClassicFighter);
 changeGameBttn.addEventListener('click', loadLobbyPage);
+
+hardcoreBttn.addEventListener('click', loadHardcoreFighterPage);
 
 console.log(myGame);
 
 updateScoreboard();
+
+//WIP
+function loadHardcoreFighterPage(){
+  if(finishedFirstRound){
+    changeGameBttn.className = "change-game-bttn";
+  }
+
+  hardcoreGuitar1.innerText = " ";
+  hardcoreGuitar2.innerText = " ";
+  hardcoreGuitar3.innerText = " ";
+  hardcoreGuitar4.innerText = " ";
+  hardcoreGuitar5.innerText = " ";
+
+  myGame.humanFighter = "undecided";
+  myGame.computerFighter = "undecided";
+
+  fightScene.className = "fight-game-section-hidden";
+
+  classicBttn.className = "classic-section-hide";
+  hardcoreBttn.className = "hardcore-section-hide";
+  classicFighters.className = "classic-game-section-hidden";
+  hardcoreFighters.className = "hardcore-game-section";
+
+  userPrompt.innerText = "Choose your fighter!";
+
+  myGame.changeGameMode("hardcore");
+
+  console.log(myGame);
+}
 
 function loadLobbyPage(){
   fightScene.className = "fight-game-section-hidden";
@@ -47,7 +87,7 @@ function updateScoreboard(){
   computerScore.innerText = "Wins "+myGame.players[1].score;
 }
 
-function loadClassicFigherPage(){
+function loadClassicFighterPage(){
   if(finishedFirstRound){
     changeGameBttn.className = "change-game-bttn";
   }
@@ -95,7 +135,7 @@ function loadFightPage(){
   console.log(myGame);
 
   finishedFirstRound = true;
-  const myTimeout2 = setTimeout(loadClassicFigherPage, 3000);
+  const myTimeout2 = setTimeout(loadClassicFighterPage, 3000);
 }
 
 function selectClassicFighter(event){
