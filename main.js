@@ -49,6 +49,9 @@ function loadClassicFigherPage(){
   classicGuitar2.innerText = " ";
   classicGuitar3.innerText = " ";
 
+  myGame.humanFighter = "undecided";
+  myGame.computerFighter = "undecided";
+
   fightScene.className = "fight-game-section-hidden";
 
   classicBttn.className = "classic-section-hide";
@@ -58,9 +61,12 @@ function loadClassicFigherPage(){
   userPrompt.innerText = "Choose your fighter!";
 
   myGame.changeGameMode("classic");
+
+  console.log(myGame);
 }
 
 function loadFightPage(){
+  fighterSelection.className = "classic-choice-hidden";
   classicFighters.className = "classic-game-section-hidden";
   fightScene.className = "fight-game-section";
   myGame.selectComputerFighter();
@@ -82,6 +88,7 @@ function loadFightPage(){
   console.log(myGame);
 
   const myTimeout2 = setTimeout(loadClassicFigherPage, 3000);
+
 }
 
 function selectClassicFighter(event){
@@ -114,6 +121,5 @@ function selectClassicFighter(event){
 }
 
 //TO DO:
-//BUILD: Reset classic game after round mode
 //AJDUST: Show change game button after 1 round
 //BUILD: Hardcore game on the dom
