@@ -80,6 +80,7 @@ function loadLobbyPage(){
   hardcoreBttn.className = "hardcore-section";
   changeGameBttn.className = "change-game-bttn-hidden";
   classicFighters.className = "classic-game-section-hidden";
+  hardcoreFighterSection.className = "hardcore-game-section-hidden";
   finishedFirstRound = false;
 }
 
@@ -141,9 +142,14 @@ function loadFightPage(){
   updateScoreboard();
 
   console.log(myGame);
-  //
-  // finishedFirstRound = true;
-  // const myTimeout2 = setTimeout(loadClassicFighterPage, 3000);
+
+  finishedFirstRound = true;
+  if(myGame.gameMode === "classic"){
+    const myTimeout2 = setTimeout(loadClassicFighterPage, 3000);
+  }
+  else if(myGame.gameMode === "hardcore"){
+    const myTimeout2 = setTimeout(loadHardcoreFighterPage, 3000);
+  }
 }
 
 function selectHardcoreFighter(event){
@@ -162,32 +168,32 @@ function selectHardcoreFighter(event){
     myGame.selectHumanFighter("paper");
     hardcoreGuitar2.innerText = "🎸";
     console.log(myGame);
-    // fighter1.src = "assets/paper.png";
-    // const myTimeout = setTimeout(loadFightPage, 3000);
+    fighter1.src = "assets/paper.png";
+    const myTimeout = setTimeout(loadFightPage, 3000);
   }
   else if (event.target.classList.contains("scissors-image")){
     hardcoreChoice.className = "hardcore-choice";
     myGame.selectHumanFighter("scissors");
     hardcoreGuitar3.innerText = "🎸";
     console.log(myGame);
-    // fighter1.src = "assets/scissors.png";
-    // const myTimeout = setTimeout(loadFightPage, 3000);
+    fighter1.src = "assets/scissors.png";
+    const myTimeout = setTimeout(loadFightPage, 3000);
   }
   else if (event.target.classList.contains("lizard-image")){
     hardcoreChoice.className = "hardcore-choice";
     myGame.selectHumanFighter("lizard");
     hardcoreGuitar4.innerText = "🎸";
     console.log(myGame);
-    // fighter1.src = "assets/scissors.png";
-    // const myTimeout = setTimeout(loadFightPage, 3000);
+    fighter1.src = "assets/lizard.png";
+    const myTimeout = setTimeout(loadFightPage, 3000);
   }
   else if (event.target.classList.contains("alien-image")){
     hardcoreChoice.className = "hardcore-choice";
     myGame.selectHumanFighter("alien");
     hardcoreGuitar5.innerText = "🎸";
     console.log(myGame);
-    // fighter1.src = "assets/scissors.png";
-    // const myTimeout = setTimeout(loadFightPage, 3000);
+    fighter1.src = "assets/alien.png";
+    const myTimeout = setTimeout(loadFightPage, 3000);
   }
 }
 
