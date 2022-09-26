@@ -56,7 +56,8 @@ main{
 
 .change-game-bttn-hidden, .classic-section-hide,
 .hardcore-section-hide, .classic-game-section-hidden,
-.classic-choice-hidden, .fight-game-section-hidden{
+.classic-choice-hidden, .fight-game-section-hidden,
+.hardcore-game-section-hidden, .hardcore-choice-hidden{
   display: none;
 }
 
