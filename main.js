@@ -17,7 +17,7 @@ var classicFighters = document.querySelector("#classicFighterSection");
 var classicGuitar1 = document.querySelector("#classicGuitar1");
 var classicGuitar2 = document.querySelector("#classicGuitar2");
 var classicGuitar3 = document.querySelector("#classicGuitar3");
-var fighterSelection = document.querySelector("#classicChoice");
+var classicChoice = document.querySelector("#classicChoice");
 var fightScene = document.querySelector("#fightGameSection");
 var fighter1 = document.querySelector("#fighter1Image");
 var fighter2 = document.querySelector("#fighter2Image");
@@ -39,6 +39,7 @@ classicFighters.addEventListener('click', selectClassicFighter);
 changeGameBttn.addEventListener('click', loadLobbyPage);
 
 hardcoreBttn.addEventListener('click', loadHardcoreFighterPage);
+hardcoreFighters.addEventListener('click', selectHardcoreFighter);
 
 console.log(myGame);
 
@@ -113,7 +114,7 @@ function loadClassicFighterPage(){
 }
 
 function loadFightPage(){
-  fighterSelection.className = "classic-choice-hidden";
+  classicChoice.className = "classic-choice-hidden";
   classicFighters.className = "classic-game-section-hidden";
   fightScene.className = "fight-game-section";
   myGame.selectComputerFighter();
@@ -138,9 +139,55 @@ function loadFightPage(){
   const myTimeout2 = setTimeout(loadClassicFighterPage, 3000);
 }
 
+function selectHardcoreFighter(event){
+  if (event.target.classList.contains("rock-image")){
+    console.log("rock");
+
+    hardcoreChoice.className = "hardcore-choice";
+    myGame.selectHumanFighter("rock");
+    hardcoreGuitar1.innerText = "🎸";
+    console.log(myGame);
+    //DO NEXT ITERATION:
+    // fighter1.src = "assets/rock.png";
+    // const myTimeout = setTimeout(loadFightPage, 3000);
+  }
+  else if (event.target.classList.contains("paper-image")){
+    hardcoreChoice.className = "hardcore-choice";
+    myGame.selectHumanFighter("paper");
+    hardcoreGuitar2.innerText = "🎸";
+    console.log(myGame);
+    // fighter1.src = "assets/paper.png";
+    // const myTimeout = setTimeout(loadFightPage, 3000);
+  }
+  else if (event.target.classList.contains("scissors-image")){
+    hardcoreChoice.className = "hardcore-choice";
+    myGame.selectHumanFighter("scissors");
+    hardcoreGuitar3.innerText = "🎸";
+    console.log(myGame);
+    // fighter1.src = "assets/scissors.png";
+    // const myTimeout = setTimeout(loadFightPage, 3000);
+  }
+  else if (event.target.classList.contains("lizard-image")){
+    hardcoreChoice.className = "hardcore-choice";
+    myGame.selectHumanFighter("lizard");
+    hardcoreGuitar4.innerText = "🎸";
+    console.log(myGame);
+    // fighter1.src = "assets/scissors.png";
+    // const myTimeout = setTimeout(loadFightPage, 3000);
+  }
+  else if (event.target.classList.contains("alien-image")){
+    hardcoreChoice.className = "hardcore-choice";
+    myGame.selectHumanFighter("alien");
+    hardcoreGuitar5.innerText = "🎸";
+    console.log(myGame);
+    // fighter1.src = "assets/scissors.png";
+    // const myTimeout = setTimeout(loadFightPage, 3000);
+  }
+}
+
 function selectClassicFighter(event){
   if (event.target.classList.contains("rock-image")){
-    fighterSelection.className = "classic-choice";
+    classicChoice.className = "classic-choice";
     myGame.selectHumanFighter("rock");
     classicGuitar1.innerText = "🎸";
     console.log(myGame);
@@ -149,7 +196,7 @@ function selectClassicFighter(event){
 
   }
   else if (event.target.classList.contains("paper-image")){
-    fighterSelection.className = "classic-choice";
+    classicChoice.className = "classic-choice";
     myGame.selectHumanFighter("paper");
     classicGuitar2.innerText = "🎸";
     console.log(myGame);
@@ -158,7 +205,7 @@ function selectClassicFighter(event){
 
   }
   else if (event.target.classList.contains("scissors-image")){
-    fighterSelection.className = "classic-choice";
+    classicChoice.className = "classic-choice";
     myGame.selectHumanFighter("scissors");
     classicGuitar3.innerText = "🎸";
     console.log(myGame);
