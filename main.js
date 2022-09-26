@@ -116,11 +116,18 @@ function loadClassicFighterPage(){
 function loadFightPage(){
   classicChoice.className = "classic-choice-hidden";
   classicFighters.className = "classic-game-section-hidden";
+  hardcoreFighterSection.className = "hardcore-game-section-hidden";
+  hardcoreChoice.className = "hardcore-choice-hidden";
   fightScene.className = "fight-game-section";
   myGame.selectComputerFighter();
   fighter2.src = `assets/${myGame.computerFighter}.png`;
 
-  var result = myGame.playClassicMode();
+  if(myGame.gameMode === "classic"){
+    var result = myGame.playClassicMode();
+  }
+  else if(myGame.gameMode === "hardcore"){
+    var result = myGame.playHardcoreMode();
+  }
 
   if(result === "draw"){
     userPrompt.innerText = "It's a draw!";
@@ -134,9 +141,9 @@ function loadFightPage(){
   updateScoreboard();
 
   console.log(myGame);
-
-  finishedFirstRound = true;
-  const myTimeout2 = setTimeout(loadClassicFighterPage, 3000);
+  //
+  // finishedFirstRound = true;
+  // const myTimeout2 = setTimeout(loadClassicFighterPage, 3000);
 }
 
 function selectHardcoreFighter(event){
@@ -147,9 +154,8 @@ function selectHardcoreFighter(event){
     myGame.selectHumanFighter("rock");
     hardcoreGuitar1.innerText = "🎸";
     console.log(myGame);
-    //DO NEXT ITERATION:
-    // fighter1.src = "assets/rock.png";
-    // const myTimeout = setTimeout(loadFightPage, 3000);
+    fighter1.src = "assets/rock.png";
+    const myTimeout = setTimeout(loadFightPage, 3000);
   }
   else if (event.target.classList.contains("paper-image")){
     hardcoreChoice.className = "hardcore-choice";
