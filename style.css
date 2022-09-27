@@ -12,6 +12,7 @@ body{
   align-items: center;
   text-align: center;
   background-color: #C41E3D;
+  border-style: dashed;
 }
 
 .center-section{
@@ -24,14 +25,41 @@ body{
   background-color: #7D1128;
 }
 
+  #div1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 50vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #7D1128; */
+  border-style: dashed;
+}
+
+
 header{
+  display: flex;
+  width: 50vw;
+  height: 25vh;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  border-style: dashed;
+  border-color: blue;
+}
+
+/* header{
   display: flex;
   width: 50vw;
   height: 25vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+  border-style: dashed;
+  border-color: blue;
+} */
 
 main{
   display: flex;
