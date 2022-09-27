@@ -13,6 +13,7 @@ I built an interactive website that plays a game of rock, paper, scissors with t
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+![Screen Shot 2022-09-27 at 4 24 55 PM](https://user-images.githubusercontent.com/19957834/192654730-22655610-f8ac-4b03-b2cf-83b7fba12f8e.png)
 
 
 ### Context:
@@ -21,7 +22,7 @@ This application took me ~32 hours to make. We are in week 6 of mod 1.
 
 ### Contributors:
 [//]: <> (Who worked on this application? Link to their GitHubs)
-* https://github.com/knpausch
+[knpausch]( https://github.com/knpausch)
 
 ### Learning Goals:
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
