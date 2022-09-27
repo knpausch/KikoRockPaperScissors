@@ -90,6 +90,7 @@ main{
   width: 35vw;
   display: flex;
   justify-content: space-evenly;
+  font-size: 50px;
 }
 
 .hardcore-game-section{
@@ -99,6 +100,7 @@ main{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-size: 50px;
 }
 
 .hardcore-choice{
@@ -115,8 +117,15 @@ div{
 
 .rock-image, .paper-image, .scissors-image,
 .moshpit-image, .sickSolo-image, .fighter1-image, .fighter2-image{
-  width: 200px;
-  height: 200px;
+  width: 9vw;
+}
+
+.flame-image{
+  width: 25vw;
+}
+
+.headbang-image{
+  width: 10vw;
 }
 
 .classic-fighters, .hardcore-fighters{
@@ -141,22 +150,30 @@ div{
 }
 
 h1{
-  font-size: 50px;
+  /* font-size: 50px; */
   margin-bottom: 1px;
 }
 
 h2{
-  font-size: 40px;
+  /* font-size: 40px; */
   margin-bottom: 1px;
 }
 
 p, h3{
   margin-top:2px;
-  font-size: 25px;
+  /* font-size: 25px; */
+}
+
+#div6{
+  margin-top: 30px;
+}
+
+#div7{
+  margin-top: 100px;
 }
 
 /* copy paste another for hardcore guitar */
-.classic-guitar2{
-  padding-left: 75px;
-  padding-right: 75px;
+.classic-guitar2, .hardcore-guitar2{
+  padding-left: 35px;
+  padding-right: 35px;
 }
