@@ -32,7 +32,7 @@ class Game{
       this.computerFighter = classicFighterList[randomNum];
     }
     else if (this.gameMode === "hardcore"){
-      var hardcoreFighterList = ["rock", "paper", "scissors", "lizard", "alien"];
+      var hardcoreFighterList = ["rock", "paper", "scissors", "moshpit", "sickSolo"];
       var randomNum = Math.floor(Math.random() * hardcoreFighterList.length);
       this.computerFighter = hardcoreFighterList[randomNum];
     }
@@ -83,52 +83,52 @@ class Game{
       console.log(`A draw between ${this.humanFighter} and ${this.computerFighter}!`);
       result = "draw";
     }
-    else if(this.humanFighter === "rock" && (this.computerFighter === "scissors" || this.computerFighter === "lizard")){
+    else if(this.humanFighter === "rock" && (this.computerFighter === "scissors" || this.computerFighter === "moshpit")){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
       this.players[0].updateScore();
       result = "human";
     }
-    else if((this.humanFighter === "scissors" || this.humanFighter === "lizard") && this.computerFighter === "rock"){
+    else if((this.humanFighter === "scissors" || this.humanFighter === "moshpit") && this.computerFighter === "rock"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
       this.players[1].updateScore();
       result = "computer";
     }
-    else if(this.humanFighter === "paper" && (this.computerFighter === "rock" || this.computerFighter === "alien")){
+    else if(this.humanFighter === "paper" && (this.computerFighter === "rock" || this.computerFighter === "sickSolo")){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
       this.players[0].updateScore();
       result = "human";
     }
-    else if((this.humanFighter === "rock" || this.humanFighter === "alien") && this.computerFighter === "paper"){
+    else if((this.humanFighter === "rock" || this.humanFighter === "sickSolo") && this.computerFighter === "paper"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
       this.players[1].updateScore();
       result = "computer";
     }
-    else if(this.humanFighter === "scissors" && (this.computerFighter === "paper" || this.computerFighter === "lizard")){
+    else if(this.humanFighter === "scissors" && (this.computerFighter === "paper" || this.computerFighter === "moshpit")){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
       this.players[0].updateScore();
       result = "human";
     }
-    else if((this.humanFighter === "paper" || this.humanFighter === "lizard") && this.computerFighter === "scissors"){
+    else if((this.humanFighter === "paper" || this.humanFighter === "moshpit") && this.computerFighter === "scissors"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
       this.players[1].updateScore();
       result = "computer";
     }
-    else if(this.humanFighter === "lizard" && (this.computerFighter === "paper" || this.computerFighter === "alien")){
+    else if(this.humanFighter === "moshpit" && (this.computerFighter === "paper" || this.computerFighter === "sickSolo")){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
       this.players[0].updateScore();
       result = "human";
     }
-    else if((this.humanFighter === "paper" || this.humanFighter === "alien") && this.computerFighter === "lizard"){
+    else if((this.humanFighter === "paper" || this.humanFighter === "sickSolo") && this.computerFighter === "moshpit"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
       this.players[1].updateScore();
       result = "computer";
     }
-    else if(this.humanFighter === "alien" && (this.computerFighter === "scissors" || this.computerFighter === "rock")){
+    else if(this.humanFighter === "sickSolo" && (this.computerFighter === "scissors" || this.computerFighter === "rock")){
       console.log(`${this.players[0].name} wins ${this.humanFighter} beats ${this.computerFighter}!`);
       this.players[0].updateScore();
       result = "human";
     }
-    else if((this.humanFighter === "scissors" || this.humanFighter === "rock") && this.computerFighter === "alien"){
+    else if((this.humanFighter === "scissors" || this.humanFighter === "rock") && this.computerFighter === "sickSolo"){
       console.log(`${this.players[1].name} wins ${this.computerFighter} beats ${this.humanFighter}!`);
       this.players[1].updateScore();
       result = "computer";

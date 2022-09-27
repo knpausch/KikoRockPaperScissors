@@ -183,20 +183,20 @@ function selectHardcoreFighter(event){
     fighter1.src = "assets/scissors.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
-  else if (event.target.classList.contains("lizard-image")){
+  else if (event.target.classList.contains("moshpit-image")){
     hardcoreChoice.className = "hardcore-choice";
-    myGame.selectHumanFighter("lizard");
+    myGame.selectHumanFighter("moshpit");
     hardcoreGuitar4.innerText = "🎸";
     console.log(myGame);
-    fighter1.src = "assets/lizard.png";
+    fighter1.src = "assets/moshpit.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
-  else if (event.target.classList.contains("alien-image")){
+  else if (event.target.classList.contains("sickSolo-image")){
     hardcoreChoice.className = "hardcore-choice";
-    myGame.selectHumanFighter("alien");
+    myGame.selectHumanFighter("sickSolo");
     hardcoreGuitar5.innerText = "🎸";
     console.log(myGame);
-    fighter1.src = "assets/alien.png";
+    fighter1.src = "assets/sickSolo.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
   hardcoreFightersBox.style.cursor = "default";
