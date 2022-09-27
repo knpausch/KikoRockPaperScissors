@@ -20,7 +20,9 @@ var fightScene = document.querySelector("#fightGameSection");
 var fighter1 = document.querySelector("#fighter1Image");
 var fighter2 = document.querySelector("#fighter2Image");
 var changeGameBttn = document.querySelector("#changeGameBttn");
+var classicFighterBox = document.querySelector("#classicFighters");
 
+var hardcoreFightersBox = document.querySelector("#hardcoreFighters");
 var hardcoreFighters = document.querySelector("#hardcoreFighterSection");
 var hardcoreGuitar1 = document.querySelector("#hardcoreGuitar1");
 var hardcoreGuitar2 = document.querySelector("#hardcoreGuitar2");
@@ -40,6 +42,7 @@ hardcoreBttn.addEventListener('click', loadHardcoreFighterPage);
 hardcoreFighters.addEventListener('click', selectHardcoreFighter);
 
 console.log(myGame);
+
 
 updateScoreboard();
 
@@ -66,6 +69,7 @@ function loadHardcoreFighterPage(){
   hardcoreFighters.className = "hardcore-game-section";
 
   userPrompt.innerText = "Choose your fighter!";
+  hardcoreFightersBox.style.cursor = "pointer";
 
   myGame.changeGameMode("hardcore");
 
@@ -107,6 +111,7 @@ function loadClassicFighterPage(){
   classicFighters.className = "classic-game-section";
 
   userPrompt.innerText = "Choose your fighter!";
+  classicFighterBox.style.cursor = "pointer";
 
   myGame.changeGameMode("classic");
 
@@ -114,6 +119,7 @@ function loadClassicFighterPage(){
 }
 
 function loadFightPage(){
+
   classicChoice.className = "classic-choice-hidden";
   classicFighters.className = "classic-game-section-hidden";
   hardcoreFighterSection.className = "hardcore-game-section-hidden";
@@ -154,7 +160,6 @@ function loadFightPage(){
 function selectHardcoreFighter(event){
   if (event.target.classList.contains("rock-image")){
     console.log("rock");
-
     hardcoreChoice.className = "hardcore-choice";
     myGame.selectHumanFighter("rock");
     hardcoreGuitar1.innerText = "🎸";
@@ -194,6 +199,7 @@ function selectHardcoreFighter(event){
     fighter1.src = "assets/alien.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
+  hardcoreFightersBox.style.cursor = "default";
 }
 
 function selectClassicFighter(event){
@@ -223,4 +229,5 @@ function selectClassicFighter(event){
     fighter1.src = "assets/scissors.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
+  classicFighterBox.style.cursor = "default";
 }

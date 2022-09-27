@@ -52,6 +52,7 @@ main{
   align-items: center;
   text-align: center;
   background-color: #5A0C1C;
+  cursor: pointer;
 }
 
 .change-game-bttn-hidden, .classic-section-hide,
@@ -59,6 +60,9 @@ main{
 .classic-choice-hidden, .fight-game-section-hidden,
 .hardcore-game-section-hidden, .hardcore-choice-hidden{
   display: none;
+}
+
+.fight-game-section{
 }
 
 .classic-game-section{
@@ -102,6 +106,9 @@ div{
 .lizard-image, .alien-image, .fighter1-image, .fighter2-image{
   width: 200px;
   height: 200px;
+}
+
+.classic-fighters, .hardcore-fighters{
   cursor: pointer;
 }
 
@@ -118,6 +125,7 @@ div{
   border-radius: 5px;
   background-color: #7C90A0;
   color: white;
+  cursor: pointer;
 }
 
 h1{
