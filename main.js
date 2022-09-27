@@ -1,15 +1,8 @@
-//NON-PRESSING ITEMS TO IMPROVE:
-//TO FIX: check game on macbook resolution, image size being dynamic
-//TO FIX: fighters show hover mouse when round ended
-//remember to hide change game button in html
-
 var human = new Player("Human","🎸");
 var computer = new Player("Computer","💾");
 var myGame = new Game(human, computer);
 
 var musicPlayer = document.querySelector("#musicPlayer");
-// musicPlayer.play();
-
 var classicBttn = document.querySelector("#classicBttn");
 var hardcoreBttn = document.querySelector("#hardcoreBttn");
 var userPrompt = document.querySelector("#userPrompt");
@@ -38,25 +31,6 @@ var hardcoreChoice = document.querySelector("#hardcoreChoice");
 
 var finishedFirstRound = false;
 
-
-// const myTimeout4 = setTimeout(doIt, 5000);
-
-// function doIt(){
-//   musicPlayer.play();
-// }
-// if (event.target.classList.contains("classic-section")){
-//   musicPlayer.play();
-// }
-
-// document.getElementById("classicBttn").onmouseover = function() {mouseOver()};
-// // document.getElementById("demo").onmouseout = function() {mouseOut()};
-//
-// function mouseOver() {
-//   musicPlayer.play();
-// }
-
-
-
 classicBttn.addEventListener('click', loadClassicFighterPage);
 classicFighters.addEventListener('click', selectClassicFighter);
 changeGameBttn.addEventListener('click', loadLobbyPage);
@@ -64,12 +38,8 @@ changeGameBttn.addEventListener('click', loadLobbyPage);
 hardcoreBttn.addEventListener('click', loadHardcoreFighterPage);
 hardcoreFighters.addEventListener('click', selectHardcoreFighter);
 
-console.log(myGame);
-
-
 updateScoreboard();
 
-//WIP
 function loadHardcoreFighterPage(){
   if(finishedFirstRound){
     changeGameBttn.className = "change-game-bttn";
@@ -95,8 +65,6 @@ function loadHardcoreFighterPage(){
   hardcoreFightersBox.style.cursor = "pointer";
 
   myGame.changeGameMode("hardcore");
-
-  console.log(myGame);
 }
 
 function loadLobbyPage(){
@@ -137,8 +105,6 @@ function loadClassicFighterPage(){
   classicFighterBox.style.cursor = "pointer";
 
   myGame.changeGameMode("classic");
-
-  console.log(myGame);
 }
 
 function loadFightPage(){
@@ -169,8 +135,6 @@ function loadFightPage(){
   }
   updateScoreboard();
 
-  console.log(myGame);
-
   finishedFirstRound = true;
   if(myGame.gameMode === "classic"){
     const myTimeout2 = setTimeout(loadClassicFighterPage, 3000);
@@ -182,11 +146,9 @@ function loadFightPage(){
 
 function selectHardcoreFighter(event){
   if (event.target.classList.contains("rock-image")){
-    console.log("rock");
     hardcoreChoice.className = "hardcore-choice";
     myGame.selectHumanFighter("rock");
     hardcoreGuitar1.innerText = "🎸";
-    console.log(myGame);
     fighter1.src = "assets/rock.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
@@ -194,7 +156,6 @@ function selectHardcoreFighter(event){
     hardcoreChoice.className = "hardcore-choice";
     myGame.selectHumanFighter("paper");
     hardcoreGuitar2.innerText = "🎸";
-    console.log(myGame);
     fighter1.src = "assets/paper.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
@@ -202,7 +163,6 @@ function selectHardcoreFighter(event){
     hardcoreChoice.className = "hardcore-choice";
     myGame.selectHumanFighter("scissors");
     hardcoreGuitar3.innerText = "🎸";
-    console.log(myGame);
     fighter1.src = "assets/scissors.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
@@ -210,7 +170,6 @@ function selectHardcoreFighter(event){
     hardcoreChoice.className = "hardcore-choice";
     myGame.selectHumanFighter("moshpit");
     hardcoreGuitar4.innerText = "🎸";
-    console.log(myGame);
     fighter1.src = "assets/moshpit.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
@@ -218,7 +177,6 @@ function selectHardcoreFighter(event){
     hardcoreChoice.className = "hardcore-choice";
     myGame.selectHumanFighter("sickSolo");
     hardcoreGuitar5.innerText = "🎸";
-    console.log(myGame);
     fighter1.src = "assets/sickSolo.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
@@ -230,7 +188,6 @@ function selectClassicFighter(event){
     classicChoice.className = "classic-choice";
     myGame.selectHumanFighter("rock");
     classicGuitar1.innerText = "🎸";
-    console.log(myGame);
     fighter1.src = "assets/rock.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
 
@@ -239,7 +196,6 @@ function selectClassicFighter(event){
     classicChoice.className = "classic-choice";
     myGame.selectHumanFighter("paper");
     classicGuitar2.innerText = "🎸";
-    console.log(myGame);
     fighter1.src = "assets/paper.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
 
@@ -248,7 +204,6 @@ function selectClassicFighter(event){
     classicChoice.className = "classic-choice";
     myGame.selectHumanFighter("scissors");
     classicGuitar3.innerText = "🎸";
-    console.log(myGame);
     fighter1.src = "assets/scissors.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
