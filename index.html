@@ -3,13 +3,22 @@
   <head>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   </head>
   <body>
 
     <section class="left-section">
-      <h2 class="human-header">🎸<br>Human</h2>
-      <p id="humanScore">Wins:</p>
-      <button class="change-game-bttn-hidden" id="changeGameBttn">Change Game?</button>
+      <div id="div2">
+        <h2 class="human-header">🎸<br>Human</h2>
+        <p id="humanScore">Wins:</p>
+        <button class="change-game-bttn-hidden" id="changeGameBttn">Change Game?</button>
+      </div>
+      <img class="flame-image" src="assets/flame2.gif" alt="flame gif">
     </section>
 
     <section class="center-section">
@@ -78,8 +87,11 @@
     </section>
 
     <section class="right-section">
-      <h2 class="computer-header">💾<br>Computer</h2>
-      <p id="computerScore">Wins:</p>
+      <div id="div3">
+        <h2 class="computer-header">💾<br>Computer</h2>
+        <p id="computerScore">Wins:</p>
+      </div>
+      <img class="flame-image" src="assets/flame2.gif" alt="flame gif">
     </section>
 
     <script type="text/javascript" src="player.js"></script>

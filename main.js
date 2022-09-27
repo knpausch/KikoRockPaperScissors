@@ -1,6 +1,7 @@
 //NON-PRESSING ITEMS TO IMPROVE:
 //TO FIX: check game on macbook resolution, image size being dynamic
 //TO FIX: fighters show hover mouse when round ended
+//remember to hide change game button in html
 
 var human = new Player("Human","🎸");
 var computer = new Player("Computer","💾");
