@@ -1,7 +1,10 @@
 body{
   display: flex;
   color: white;
-  font-family: Geneva, Verdana, sans-serif;
+  /* font-family: Geneva, Verdana, sans-serif; */
+  font-family: 'Bungee Spice', cursive;
+  /* font-family: 'Permanent Marker', cursive; */
+
 }
 
 .left-section,.right-section{
@@ -12,6 +15,9 @@ body{
   align-items: center;
   text-align: center;
   background-color: #C41E3D;
+  justify-content: space-between;
+  font-family: 'Permanent Marker', cursive;
+
 }
 
 .center-section{
@@ -24,11 +30,16 @@ body{
   background-color: #7D1128;
 }
 
+#div1, #div2, #div3{
+  display: flex;
+  flex-direction: column;
+}
+
+
 header{
   display: flex;
   width: 50vw;
   height: 25vh;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -52,6 +63,7 @@ main{
   align-items: center;
   text-align: center;
   background-color: #5A0C1C;
+  cursor: pointer;
 }
 
 .change-game-bttn-hidden, .classic-section-hide,
@@ -59,6 +71,9 @@ main{
 .classic-choice-hidden, .fight-game-section-hidden,
 .hardcore-game-section-hidden, .hardcore-choice-hidden{
   display: none;
+}
+
+.fight-game-section{
 }
 
 .classic-game-section{
@@ -99,9 +114,12 @@ div{
 }
 
 .rock-image, .paper-image, .scissors-image,
-.lizard-image, .alien-image, .fighter1-image, .fighter2-image{
+.moshpit-image, .sickSolo-image, .fighter1-image, .fighter2-image{
   width: 200px;
   height: 200px;
+}
+
+.classic-fighters, .hardcore-fighters{
   cursor: pointer;
 }
 
@@ -111,13 +129,15 @@ div{
 
 .change-game-bttn{
   border: none;
-  font-family: Geneva, Verdana, sans-serif;
+  /* font-family: Geneva, Verdana, sans-serif; */
   width: 180px;
   height: 60px;
   font-size: 20px;
   border-radius: 5px;
   background-color: #7C90A0;
   color: white;
+  cursor: pointer;
+  font-family: 'Permanent Marker', cursive;
 }
 
 h1{

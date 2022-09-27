@@ -1,12 +1,14 @@
 //NON-PRESSING ITEMS TO IMPROVE:
-//TO FIX: fighter images, they shift up when selected
-//(use stack flexbox or fixed placement)
 //TO FIX: check game on macbook resolution, image size being dynamic
 //TO FIX: fighters show hover mouse when round ended
+//remember to hide change game button in html
 
 var human = new Player("Human","🎸");
 var computer = new Player("Computer","💾");
 var myGame = new Game(human, computer);
+
+var musicPlayer = document.querySelector("#musicPlayer");
+// musicPlayer.play();
 
 var classicBttn = document.querySelector("#classicBttn");
 var hardcoreBttn = document.querySelector("#hardcoreBttn");
@@ -22,7 +24,9 @@ var fightScene = document.querySelector("#fightGameSection");
 var fighter1 = document.querySelector("#fighter1Image");
 var fighter2 = document.querySelector("#fighter2Image");
 var changeGameBttn = document.querySelector("#changeGameBttn");
+var classicFighterBox = document.querySelector("#classicFighters");
 
+var hardcoreFightersBox = document.querySelector("#hardcoreFighters");
 var hardcoreFighters = document.querySelector("#hardcoreFighterSection");
 var hardcoreGuitar1 = document.querySelector("#hardcoreGuitar1");
 var hardcoreGuitar2 = document.querySelector("#hardcoreGuitar2");
@@ -34,6 +38,25 @@ var hardcoreChoice = document.querySelector("#hardcoreChoice");
 
 var finishedFirstRound = false;
 
+
+// const myTimeout4 = setTimeout(doIt, 5000);
+
+// function doIt(){
+//   musicPlayer.play();
+// }
+// if (event.target.classList.contains("classic-section")){
+//   musicPlayer.play();
+// }
+
+// document.getElementById("classicBttn").onmouseover = function() {mouseOver()};
+// // document.getElementById("demo").onmouseout = function() {mouseOut()};
+//
+// function mouseOver() {
+//   musicPlayer.play();
+// }
+
+
+
 classicBttn.addEventListener('click', loadClassicFighterPage);
 classicFighters.addEventListener('click', selectClassicFighter);
 changeGameBttn.addEventListener('click', loadLobbyPage);
@@ -42,6 +65,7 @@ hardcoreBttn.addEventListener('click', loadHardcoreFighterPage);
 hardcoreFighters.addEventListener('click', selectHardcoreFighter);
 
 console.log(myGame);
+
 
 updateScoreboard();
 
@@ -68,6 +92,7 @@ function loadHardcoreFighterPage(){
   hardcoreFighters.className = "hardcore-game-section";
 
   userPrompt.innerText = "Choose your fighter!";
+  hardcoreFightersBox.style.cursor = "pointer";
 
   myGame.changeGameMode("hardcore");
 
@@ -75,6 +100,7 @@ function loadHardcoreFighterPage(){
 }
 
 function loadLobbyPage(){
+  userPrompt.innerText = "Choose your game!";
   fightScene.className = "fight-game-section-hidden";
   classicBttn.className = "classic-section";
   hardcoreBttn.className = "hardcore-section";
@@ -108,6 +134,7 @@ function loadClassicFighterPage(){
   classicFighters.className = "classic-game-section";
 
   userPrompt.innerText = "Choose your fighter!";
+  classicFighterBox.style.cursor = "pointer";
 
   myGame.changeGameMode("classic");
 
@@ -115,6 +142,7 @@ function loadClassicFighterPage(){
 }
 
 function loadFightPage(){
+
   classicChoice.className = "classic-choice-hidden";
   classicFighters.className = "classic-game-section-hidden";
   hardcoreFighterSection.className = "hardcore-game-section-hidden";
@@ -155,7 +183,6 @@ function loadFightPage(){
 function selectHardcoreFighter(event){
   if (event.target.classList.contains("rock-image")){
     console.log("rock");
-
     hardcoreChoice.className = "hardcore-choice";
     myGame.selectHumanFighter("rock");
     hardcoreGuitar1.innerText = "🎸";
@@ -179,22 +206,23 @@ function selectHardcoreFighter(event){
     fighter1.src = "assets/scissors.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
-  else if (event.target.classList.contains("lizard-image")){
+  else if (event.target.classList.contains("moshpit-image")){
     hardcoreChoice.className = "hardcore-choice";
-    myGame.selectHumanFighter("lizard");
+    myGame.selectHumanFighter("moshpit");
     hardcoreGuitar4.innerText = "🎸";
     console.log(myGame);
-    fighter1.src = "assets/lizard.png";
+    fighter1.src = "assets/moshpit.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
-  else if (event.target.classList.contains("alien-image")){
+  else if (event.target.classList.contains("sickSolo-image")){
     hardcoreChoice.className = "hardcore-choice";
-    myGame.selectHumanFighter("alien");
+    myGame.selectHumanFighter("sickSolo");
     hardcoreGuitar5.innerText = "🎸";
     console.log(myGame);
-    fighter1.src = "assets/alien.png";
+    fighter1.src = "assets/sickSolo.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
+  hardcoreFightersBox.style.cursor = "default";
 }
 
 function selectClassicFighter(event){
@@ -224,7 +252,5 @@ function selectClassicFighter(event){
     fighter1.src = "assets/scissors.png";
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
+  classicFighterBox.style.cursor = "default";
 }
-
-//TO DO:
-//BUILD: Hardcore game on the dom

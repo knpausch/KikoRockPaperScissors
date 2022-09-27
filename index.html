@@ -3,19 +3,32 @@
   <head>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   </head>
   <body>
 
     <section class="left-section">
-      <h2 class="human-header">🎸<br>Human</h2>
-      <p id="humanScore">Wins:</p>
-      <button class="change-game-bttn-hidden" id="changeGameBttn">Change Game?</button>
+      <div id="div2">
+        <h2 class="human-header">🎸<br>Human</h2>
+        <p id="humanScore">Wins:</p>
+        <button class="change-game-bttn-hidden" id="changeGameBttn">Change Game?</button>
+      </div>
+      <img class="flame-image" src="assets/flame2.gif" alt="flame gif">
     </section>
 
     <section class="center-section">
       <header>
-        <h1>Rock, Paper, Scissors</h1>
-        <h3 id="userPrompt">Choose Your Game!</h3>
+        <img class="headbang1-image" src="assets/headbang.gif" alt="headbang gif">
+        <div id="div1">
+          <h1>Rock, Paper, Scissors</h1>
+          <h3 id="userPrompt">Choose your game!</h3>
+        </div>
+        <img class="headbang2-image" src="assets/headbang.gif" alt="headbang gif">
       </header>
       <main>
         <!-- Home Screen -->
@@ -25,12 +38,12 @@
         </section>
         <section class="hardcore-section" id="hardcoreBttn">
           <h2>🔥Hardcore Mode🔥</h2>
-          <p>rock>scissors & lizard<br>paper>rock & alien<br>scissors>paper & lizard<br>lizard>paper & alien<br>alien>sicissors & rock</p>
+          <p>rock>scissors & moshpit<br>paper>rock & sick solo<br>scissors>paper & moshpit<br>moshpit>paper & sick solo<br>sick solo>sicissors & rock</p>
         </section>
 
         <!-- Select Classic Fighter Page -->
         <section class="classic-game-section-hidden" id="classicFighterSection">
-          <section class="classic-fighters">
+          <section class="classic-fighters" id="classicFighters">
             <img class="rock-image" src="assets/rock.png" alt="rock">
             <img class="paper-image" src="assets/paper.png" alt="paper">
             <img class="scissors-image" src="assets/scissors.png" alt="scissors">
@@ -44,12 +57,12 @@
 
         <!-- Select Hardcore Fighter Page-->
         <section class="hardcore-game-section-hidden" id="hardcoreFighterSection">
-          <section class="hardcore-fighters">
-            <img class="rock-image" src="assets/rock.png" alt="rock">
+          <section class="hardcore-fighters" id="hardcoreFighters">
+            <img class="rock-image" id="rockImage" src="assets/rock.png" alt="rock">
             <img class="paper-image" src="assets/paper.png" alt="paper">
             <img class="scissors-image" src="assets/scissors.png" alt="scissors">
-            <img class="lizard-image" src="assets/lizard.png" alt="lizard">
-            <img class="alien-image" src="assets/alien.png" alt="alien">
+            <img class="moshpit-image" src="assets/moshpit.png" alt="moshpit">
+            <img class="sickSolo-image" src="assets/sickSolo.png" alt="sickSolo">
           </section>
           <section class="hardcore-choice-hidden" id="hardcoreChoice">
             <div>
@@ -66,16 +79,23 @@
 
         <!-- Fight Gameplay -->
         <section class="fight-game-section-hidden" id="fightGameSection">
-          <img class="fighter1-image" id="fighter1Image" src="assets/alien.png" alt="paper">
-          <img class="fighter2-image" id="fighter2Image" src="assets/alien.png" alt="paper">
+          <img class="fighter1-image" id="fighter1Image" src="assets/sickSolo.png" alt="paper">
+          <img class="fighter2-image" id="fighter2Image" src="assets/sickSolo.png" alt="paper">
         </section>
+
+        <audio controls autoplay id="musicPlayer">
+          <source src="assets/crazyTrain.mp3" type="audio/mpeg">
+        </audio>
 
       </main>
     </section>
 
     <section class="right-section">
-      <h2 class="computer-header">💾<br>Computer</h2>
-      <p id="computerScore">Wins:</p>
+      <div id="div3">
+        <h2 class="computer-header">💾<br>Computer</h2>
+        <p id="computerScore">Wins:</p>
+      </div>
+      <img class="flame-image" src="assets/flame2.gif" alt="flame gif">
     </section>
 
     <script type="text/javascript" src="player.js"></script>
