@@ -7,6 +7,9 @@ var human = new Player("Human","🎸");
 var computer = new Player("Computer","💾");
 var myGame = new Game(human, computer);
 
+var musicPlayer = document.querySelector("#musicPlayer");
+// musicPlayer.play();
+
 var classicBttn = document.querySelector("#classicBttn");
 var hardcoreBttn = document.querySelector("#hardcoreBttn");
 var userPrompt = document.querySelector("#userPrompt");
@@ -34,6 +37,25 @@ var fightScene = document.querySelector("#fightGameSection");
 var hardcoreChoice = document.querySelector("#hardcoreChoice");
 
 var finishedFirstRound = false;
+
+
+// const myTimeout4 = setTimeout(doIt, 5000);
+
+// function doIt(){
+//   musicPlayer.play();
+// }
+// if (event.target.classList.contains("classic-section")){
+//   musicPlayer.play();
+// }
+
+// document.getElementById("classicBttn").onmouseover = function() {mouseOver()};
+// // document.getElementById("demo").onmouseout = function() {mouseOut()};
+//
+// function mouseOver() {
+//   musicPlayer.play();
+// }
+
+
 
 classicBttn.addEventListener('click', loadClassicFighterPage);
 classicFighters.addEventListener('click', selectClassicFighter);
