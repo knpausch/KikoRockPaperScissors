@@ -1,6 +1,4 @@
 //NON-PRESSING ITEMS TO IMPROVE:
-//TO FIX: fighter images, they shift up when selected
-//(use stack flexbox or fixed placement)
 //TO FIX: check game on macbook resolution, image size being dynamic
 //TO FIX: fighters show hover mouse when round ended
 
@@ -75,6 +73,7 @@ function loadHardcoreFighterPage(){
 }
 
 function loadLobbyPage(){
+  userPrompt.innerText = "Choose your game!";
   fightScene.className = "fight-game-section-hidden";
   classicBttn.className = "classic-section";
   hardcoreBttn.className = "hardcore-section";
@@ -225,6 +224,3 @@ function selectClassicFighter(event){
     const myTimeout = setTimeout(loadFightPage, 3000);
   }
 }
-
-//TO DO:
-//BUILD: Hardcore game on the dom
